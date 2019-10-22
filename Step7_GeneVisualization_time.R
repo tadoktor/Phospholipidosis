@@ -29,11 +29,11 @@ TOTAL<- filter (TOTAL_all, Gene== "Cited2", doseLevel== "High")
 
 TOTAL$hour <- "h"
                        
-exp_time <- c("696")
+exp_time <- c("192","360","696")
 dl <- "High"
 TOTAL[TOTAL$timepointHr %in% exp_time & TOTAL$doseLevel == dl, ]$Zfp36
 
-TOTAL$exposure_time_factor = factor(TOTAL$timepointHr, levels=c(  "696"))
+TOTAL$exposure_time_factor = factor(TOTAL$timepointHr, levels=c(  "192","360","696"))
 
 
 # estimate limits
